@@ -1,36 +1,27 @@
-import { Card } from 'react-bootstrap';
+import DashboardCard from "../components/DashboardCard";
+import KanbanBoard from "../components/KanbanBoard";
 
-interface DashboardCardProps {
-  title: string;
-  value: number;
-}
-
-const DashboardCard: React.FC<DashboardCardProps> = ({ title, value }) => {
+const Dashboard = () => {
   return (
-    <Card className="shadow-sm">
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{value}</Card.Text>
-      </Card.Body>
-    </Card>
-  );
-};
+    <div>
+      <h2 className="mb-4">Welcome to SynergyHub</h2>
 
-const Dashboard: React.FC = () => {
-  return (
-    <div className="p-4">
-      <h2 className="mb-4">Dashboard</h2>
+      {/* Dashboard Stats Cards */}
       <div className="row">
         <div className="col-md-4">
-          <DashboardCard title="Active Projects" value={12} />
+          <DashboardCard title="Active Projects" value="12" color="primary" />
         </div>
         <div className="col-md-4">
-          <DashboardCard title="Team Members" value={25} />
+          <DashboardCard title="Tasks Completed" value="87" color="success" />
         </div>
         <div className="col-md-4">
-          <DashboardCard title="Tasks Completed" value={45} />
+          <DashboardCard title="Pending Approvals" value="5" color="warning" />
         </div>
       </div>
+
+      {/* Kanban Board Section */}
+      <h3 className="mt-5">Task Management</h3>
+      <KanbanBoard />
     </div>
   );
 };

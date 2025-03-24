@@ -1,22 +1,21 @@
-import { BrowserRouter } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 import AppRoutes from "./routes/AppRoutes";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="d-flex">
-        <Sidebar />
-        <div className="flex-grow-1">
-          <Navbar />
-          <div className="container mt-4">
-            <AppRoutes />
-          </div>
+    <div className="container-fluid">
+      <div className="row">
+        {/* Sidebar */}
+        <div className="col-md-3 bg-dark text-light p-3">
+          <Sidebar />
+        </div>
+
+        {/* Main Content */}
+        <div className="col-md-9 p-4">
+          <AppRoutes />
         </div>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
