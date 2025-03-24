@@ -1,25 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { FaHome, FaProjectDiagram, FaUsers, FaEnvelope, FaCog } from "react-icons/fa";
+import "../styles/global.css"; // Import styles (we’ll define them later)
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
   return (
-    <div className="bg-light vh-100 position-fixed d-flex flex-column justify-content-between">
-      <div>
-        <h4 className="text-center py-3">SynergyHub</h4>
-        <ul className="nav flex-column px-3">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">Dashboard</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/projects" className="nav-link">Projects</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/teams" className="nav-link">Teams</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/messages" className="nav-link">Messages</Link>
-          </li>
-        </ul>
-      </div>
+    <div className="sidebar">
+      <h2 className="sidebar-title">SynergyHub</h2>
+      <ul>
+        <li><Link to="/"><FaHome /> Dashboard</Link></li>
+        <li><Link to="/projects"><FaProjectDiagram /> Projects</Link></li>
+        <li><Link to="/teams"><FaUsers /> Teams</Link></li>
+        <li><Link to="/messages"><FaEnvelope /> Messages</Link></li>
+        <li><Link to="/settings"><FaCog /> Settings</Link></li>
+      </ul>
     </div>
   );
 };
