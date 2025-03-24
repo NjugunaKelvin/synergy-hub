@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.team-card {
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
