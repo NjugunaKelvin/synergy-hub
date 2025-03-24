@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { DragDropContext, Droppable, Draggable, DroppableProvided, DraggableProvided } from "react-beautiful-dnd";
+import {
+  DndContext,
+  DragEndEvent,
+  closestCorners,
+} from "@dnd-kit/core";
+import {
+  SortableContext,
+  verticalListSortingStrategy,
+  arrayMove,
+} from "@dnd-kit/sortable";
 
 const KanbanBoard = () => {
   const [tasks, setTasks] = useState([
@@ -10,52 +19,41 @@ const KanbanBoard = () => {
 
   const categories = ["todo", "in-progress", "done"];
 
-  const handleDragEnd = (result: any) => {
-    if (!result.destination) return;
+  const handleDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+    if (!over) return;
 
-    const updatedTasks = [...tasks];
-    const [movedTask] = updatedTasks.splice(result.source.index, 1);
-    movedTask.status = categories[result.destination.droppableId];
-    updatedTasks.splice(result.destination.index, 0, movedTask);
-
-    setTasks(updatedTasks);
+    setTasks((prevTasks) => {
+      const oldIndex = prevTasks.findIndex((task) => task.id === active.id);
+      const newIndex = prevTasks.findIndex((task) => task.id === over.id);
+      return arrayMove(prevTasks, oldIndex, newIndex);
+    });
   };
 
   return (
-    <DragDropContext onDragEnd={handleDragEnd}>
+    <DndContext collisionDetection={closestCorners} onDragEnd={handleDragEnd}>
       <div className="row">
-        {categories.map((category, index) => (
-            <Droppable key={category} droppableId={index.toString()}>
-            {(provided: DroppableProvided) => (
-              <div
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-              className="col-md-4 bg-light p-3 rounded shadow-sm"
-              >
-              <h4 className="text-center text-capitalize">{category}</h4>
+        {categories.map((category) => (
+          <div key={category} className="col-md-4 bg-light p-3 rounded shadow-sm">
+            <h4 className="text-center text-capitalize">{category}</h4>
+
+            <SortableContext items={tasks} strategy={verticalListSortingStrategy}>
               {tasks
                 .filter((task) => task.status === category)
-                .map((task, i) => (
-                <Draggable key={task.id} draggableId={task.id} index={i}>
-                  {(provided: DraggableProvided) => (
+                .map((task) => (
                   <div
-                    ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
+                    key={task.id}
                     className="card mb-2 p-2 shadow-sm"
+                    id={task.id}
                   >
                     {task.title}
                   </div>
-                  )}
-                </Draggable>
                 ))}
-              {provided.placeholder}
-              </div>
-            )}
-            </Droppable>
+            </SortableContext>
+          </div>
         ))}
       </div>
-    </DragDropContext>
+    </DndContext>
   );
 };
 

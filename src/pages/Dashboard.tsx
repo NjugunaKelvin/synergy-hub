@@ -1,6 +1,6 @@
 import DashboardCard from "../components/DashboardCard";
 import KanbanBoard from "../components/KanbanBoard";
-import avatar from "../assets/avatar.jpg"; // Online image for user profile
+import avatar from "../assets/avatar.jpeg"; // Online image for user profile
 import { FaTasks, FaUsers, FaProjectDiagram } from "react-icons/fa";
 
 const Dashboard = () => {

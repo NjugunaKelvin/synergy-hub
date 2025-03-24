@@ -46,4 +46,40 @@
     cursor: grab;
     background-color: white;
   }
+
+  /* Improve Kanban Board */
+.kanban-column {
+    min-height: 250px;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  
+  .kanban-column .card {
+    cursor: grab;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .kanban-column .card:hover {
+    background: #f8f9fa;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    
+    .main-content {
+      margin-left: 0;
+    }
+  
+    .kanban-column {
+      flex: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
   
