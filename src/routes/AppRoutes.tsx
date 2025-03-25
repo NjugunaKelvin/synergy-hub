@@ -4,6 +4,7 @@ import Projects from "../pages/Projects";
 import Teams from "../pages/Teams";
 import Messages from "../pages/Messages";
 import Settings from "../pages/Settings";
+import ProjectPage from "../pages/ProjectPage";
 
 
 const AppRoutes = () => {
@@ -12,6 +13,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Dashboard />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/teams" element={<Teams />} />
+      <Route path="/projects/:id" element={<ProjectPage />} />
       <Route path="/messages" element={<Messages />} />
       <Route path="/settings" element={<Settings />} />
     </Routes>
@@ -19,3 +21,6 @@ const AppRoutes = () => {
 };
 
 export default AppRoutes;
+
+
+

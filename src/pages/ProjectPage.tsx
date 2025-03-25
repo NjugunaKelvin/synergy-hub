@@ -34,7 +34,7 @@ const projects = [
 
 const categories = ["All", "Web Development", "Machine Learning"];
 
-const Projects = () => {
+const ProjectsPage = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -43,17 +43,24 @@ const Projects = () => {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <div className="projects-container">
-      <h2 className="title">🚀 Explore Projects</h2>
-      <ProjectFilter categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
-      
-      <div className="projects-grid">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
+    <div className="container-fluid bg-dark text-light py-5">
+      <div className="container">
+        <h2 className="text-center neon-text">🚀 Explore Open Source Projects</h2>
+        
+        {/* Filter */}
+        <ProjectFilter categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+        
+        {/* Project Grid */}
+        <div className="row mt-4">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="col-lg-4 col-md-6 mb-4">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default ProjectsPage;
