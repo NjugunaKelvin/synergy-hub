@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/Messages.css"; // Import the dark theme styles
 
 const conversations = [
   { id: "1", name: "Alice Johnson", lastMessage: "Hey, how’s the project going?", avatar: "/avatars/alice.jpg" },
@@ -8,15 +9,15 @@ const conversations = [
 
 const MessagesPage = () => {
   return (
-    <div className="container mt-4 text-white">
-      <h1 className="text-center mb-4">Messages</h1>
-      <div className="list-group">
+    <div className="messages-container">
+      <h1 className="messages-header">Messages</h1>
+      <div className="messages-list">
         {conversations.map((chat) => (
-          <Link key={chat.id} to={`/messages/${chat.id}`} className="list-group-item list-group-item-action d-flex align-items-center bg-dark text-white">
-            <img src={chat.avatar} alt={chat.name} className="rounded-circle me-3" width="50" height="50" />
-            <div>
-              <h5 className="mb-0">{chat.name}</h5>
-              <p className="text-muted mb-0">{chat.lastMessage}</p>
+          <Link key={chat.id} to={`/messages/${chat.id}`} className="message-card">
+            <img src={chat.avatar} alt={chat.name} className="message-avatar" />
+            <div className="message-info">
+              <h5 className="message-name">{chat.name}</h5>
+              <p className="message-preview">{chat.lastMessage}</p>
             </div>
           </Link>
         ))}

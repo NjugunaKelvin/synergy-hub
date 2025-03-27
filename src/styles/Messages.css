@@ -1,56 +1,87 @@
-/* Dark theme */
-body {
-    background-color: #121212;
-    color: white;
+/* General Messages Page Styling */
+.messages-container {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Messages Header */
+.messages-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+/* Messages List */
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Message Cards */
+.message-card {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.message-card:hover {
+  border-color: #00bfff;
+  background-color: #292929;
+  transform: scale(1.02);
+}
+
+/* Avatar Styling */
+.message-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #00bfff;
+  margin-right: 15px;
+}
+
+/* Message Info */
+.message-info {
+  flex-grow: 1;
+}
+
+.message-name {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.message-preview {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .messages-container {
+    padding: 20px;
   }
-  
-  .container {
-    max-width: 600px;
+
+  .message-card {
+    padding: 12px;
   }
-  
-  /* Messages List */
-  .list-group-item {
-    background: #1e1e1e;
-    border: none;
-    transition: 0.3s;
+
+  .message-name {
+    font-size: 1rem;
   }
-  
-  .list-group-item:hover {
-    background: #2a2a2a;
+
+  .message-preview {
+    font-size: 0.85rem;
   }
-  
-  /* Chat Box */
-  .chat-box {
-    height: 400px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  /* Messages */
-  .message {
-    padding: 10px 15px;
-    border-radius: 10px;
-    max-width: 75%;
-    word-wrap: break-word;
-  }
-  
-  .bg-primary {
-    background-color: #007bff !important;
-  }
-  
-  .bg-secondary {
-    background-color: #28a745 !important;
-  }
-  
-  /* Input & Button */
-  .input-group input {
-    border-radius: 20px;
-    padding: 10px;
-  }
-  
-  .btn-success {
-    border-radius: 20px;
-  }
-  
+}

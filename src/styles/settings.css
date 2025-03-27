@@ -1,44 +1,103 @@
-/* Dark theme */
-body.dark-theme {
-    background-color: #121212;
-    color: white;
+/* Settings Page Styling */
+.settings-container {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+.settings-header {
+  text-align: center;
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+/* Settings Cards */
+.settings-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.settings-card:hover {
+  border-color: #00bfff;
+  background-color: #292929;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
+  margin-bottom: 10px;
+}
+
+/* Form Inputs */
+.form-control {
+  background-color: #222;
+  color: white;
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: #bbb;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+  background-color: #008f50;
+}
+
+.btn-warning:hover {
+  background-color: #d4a300;
+}
+
+.btn-danger:hover {
+  background-color: #b30000;
+}
+
+/* Form Switch */
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 20px;
   }
-  
-  .container {
-    max-width: 600px;
+
+  .settings-card {
+    padding: 15px;
   }
-  
-  /* Card Styling */
-  .card {
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2);
-  }
-  
-  .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Buttons */
-  .btn {
-    border-radius: 20px;
-    transition: 0.3s;
-  }
-  
-  .btn-success {
-    background-color: #28a745;
-  }
-  
-  .btn-warning {
-    background-color: #ffc107;
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-  }
-  
-  /* Form Inputs */
-  .form-control {
-    border-radius: 5px;
-  }
-  
+}
