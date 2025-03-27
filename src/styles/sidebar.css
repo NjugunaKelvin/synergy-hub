@@ -1,0 +1,80 @@
+/* Sidebar - Full Screen by Default */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #0a192f;
+    color: white;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 255, 255, 0.2);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ff99;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background: rgba(0, 255, 99, 0.2);
+  }
+  
+  /* Hide Sidebar on Small Screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      transform: translateX(-100%);
+      width: 220px;
+      box-shadow: none;
+    }
+  
+    .sidebar.open {
+      transform: translateX(0);
+      box-shadow: 4px 0 10px rgba(0, 255, 255, 0.2);
+    }
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+    }
+  }
+  
