@@ -15,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/teams" element={<Teams />} />
       <Route path="/projects/:id" element={<ProjectPage />} />
       <Route path="/messages" element={<Messages />} />
+      <Route path="/messages/:id" element={<ChatPage />} />
       <Route path="/settings" element={<Settings />} />
     </Routes>
   );
