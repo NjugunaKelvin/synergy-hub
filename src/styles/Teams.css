@@ -1,0 +1,93 @@
+/* Global Dark Theme Styles */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Dark Theme for Containers */
+  .container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Section Headings */
+  h1, h2, h3, h4 {
+    color: #00bfff; /* Cyan accent */
+  }
+  
+  /* Mission & Vision Cards */
+  .card {
+    background-color: #222;
+    color: #ffffff;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Core Values Section */
+  .card h4 {
+    color: #ffcc00;
+  }
+  
+  .card p {
+    color: #dddddd;
+  }
+  
+  /* Team Members Section */
+  .team-card {
+    background-color: #292929;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .team-card:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+  .team-card img {
+    border-radius: 50%;
+    border: 3px solid #00bfff;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-card h3 {
+    color: #00ff99;
+  }
+  
+  .team-card p {
+    color: #bbbbbb;
+  }
+  
+  /* Social Media Links */
+  .team-card a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .team-card a:hover {
+    color: #00bfff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+    
+    .team-card {
+      padding: 15px;
+    }
+  }
+  
