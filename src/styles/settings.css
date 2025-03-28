@@ -1,25 +1,26 @@
-/* Settings Page Styling */
+/* 🌙 Dark Theme Settings Page */
 .settings-container {
   background-color: #121212;
-  color: #ffffff;
+  color: #e0e0e0;
   padding: 40px;
   max-width: 600px;
   margin: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.08);
 }
 
-/* Header */
+/* 🏷️ Header */
 .settings-header {
   text-align: center;
-  font-size: 2rem;
-  color: #00bfff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00bcd4; /* Soft cyan */
   margin-bottom: 20px;
 }
 
-/* Settings Cards */
+/* 📦 Settings Cards */
 .settings-card {
-  background-color: #1e1e1e;
+  background-color: #1a1a1a;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -28,11 +29,11 @@
 }
 
 .settings-card:hover {
-  border-color: #00bfff;
-  background-color: #292929;
+  border-color: #00bcd4;
+  background-color: #222222;
 }
 
-/* Profile Section */
+/* 🖼️ Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -43,25 +44,45 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid #00bfff;
+  border: 3px solid #00bcd4;
   margin-bottom: 10px;
 }
 
-/* Form Inputs */
+/* 📝 Form Inputs */
 .form-control {
-  background-color: #222;
-  color: white;
-  border: 1px solid #444;
+  background-color: #181818 !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #333;
   padding: 10px;
   border-radius: 5px;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Placeholder Styling */
 .form-control::placeholder {
-  color: #bbb;
+  color: #757575 !important; /* Soft gray for better readability */
+  opacity: 0.8;
 }
 
-/* Buttons */
+.form-control:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+  outline: none;
+}
+
+/* 🎛️ Toggle Switch */
+.form-check-input {
+  cursor: pointer;
+  background-color: #444;
+  border: none;
+}
+
+.form-check-input:checked {
+  background-color: #00bcd4;
+}
+
+/* 🎨 Buttons */
 .btn {
   width: 100%;
   padding: 10px;
@@ -70,28 +91,34 @@
   transition: all 0.3s ease-in-out;
 }
 
+.btn-success {
+  background-color: #009688; /* Teal */
+  color: white;
+}
+
 .btn-success:hover {
-  background-color: #008f50;
+  background-color: #00796b;
+}
+
+.btn-warning {
+  background-color: #fbc02d; /* Soft yellow */
+  color: black;
 }
 
 .btn-warning:hover {
-  background-color: #d4a300;
+  background-color: #f9a825;
+}
+
+.btn-danger {
+  background-color: #e53935; /* Muted Red */
+  color: white;
 }
 
 .btn-danger:hover {
-  background-color: #b30000;
+  background-color: #c62828;
 }
 
-/* Form Switch */
-.form-check-input {
-  cursor: pointer;
-}
-
-.form-check-label {
-  font-size: 1.1rem;
-}
-
-/* Responsive Design */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
   .settings-container {
     padding: 20px;
