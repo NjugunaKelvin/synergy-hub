@@ -19,7 +19,7 @@ const LanguageUsage: React.FC = () => {
       {languages.map((lang, index) => (
         <div key={index} className="mb-2">
           <div className="d-flex justify-content-between">
-            <span>{lang.name}</span>
+            <span className="text-white">{lang.name}</span>
             <span>{lang.percentage}%</span>
           </div>
           <div className="progress">

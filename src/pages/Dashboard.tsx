@@ -26,7 +26,7 @@ const Dashboard = () => {
       <div className="d-flex align-items-center justify-content-between bg-dark p-4 rounded shadow">
         <div>
           <h2 className="text-light">Welcome back, <span className="text-primary">Vin</span> 👋</h2>
-          <p className="text-muted">Here’s what’s happening today.</p>
+          <p className="text-white">Here’s what’s happening today.</p>
         </div>
         <img src={avatar} alt="User Avatar" className="rounded-circle" width="60" />
       </div>

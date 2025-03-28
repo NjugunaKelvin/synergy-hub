@@ -11,10 +11,10 @@ interface TeamCardProps {
 
 const TeamCard: React.FC<TeamCardProps> = ({ name, role, image, email, linkedin, twitter }) => {
   return (
-    <div className="card team-card shadow-sm p-3 text-center">
+    <div className="card team-card shadow-sm p-3 text-center bg-black">
       <img src={image} alt={name} className="rounded-circle team-image mx-auto" />
-      <h5 className="mt-3">{name}</h5>
-      <p className="text-muted">{role}</p>
+      <h5 className="mt-3 text-white fw-bolder">{name}</h5>
+      <p className="text-light">{role}</p>
       <div className="social-icons d-flex justify-content-center gap-3">
         <a href={`mailto:${email}`} className="text-dark"><FaEnvelope /></a>
         <a href={linkedin} className="text-primary"><FaLinkedin /></a>

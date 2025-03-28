@@ -1,37 +1,25 @@
 import { Link } from "react-router-dom";
+import "../styles/projects.css";
 
-interface ProjectCardProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  techStack: string[];
-  team: string[];
-  status: string;
-}
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, category, techStack, team, status }) => {
+const ProjectCard = ({ id, title, description, techStack, status }) => {
   return (
-    <div className="card project-card border-0 shadow-lg">
-      <div className="card-body text-light">
-        <h5 className="card-title neon-text">{title}</h5>
-        <p className="card-text">{description}</p>
-        
-        <div className="mb-2">
-          <span className="badge bg-primary me-2">{category}</span>
-          <span className={`badge ${status === "Active" ? "bg-success" : "bg-warning"}`}>{status}</span>
-        </div>
-
-        <p className="tech-stack">
-          <strong>Tech Stack:</strong> {techStack.join(", ")}
-        </p>
-
-        <p className="team-members">
-          <strong>Team:</strong> {team.length > 0 ? team.join(", ") : "No members yet"}
-        </p>
-
-        <Link to={`/projects/${id}`} className="btn btn-neon">View Details</Link>
+    <div className="card bg-secondary text-light p-3 shadow">
+      <h4 className="text-primary">{title}</h4>
+      <p>{description}</p>
+      <p><strong>Status:</strong> {status}</p>
+      
+      {/* Tech Stack */}
+      <div className="mb-3">
+        {techStack.map((tech, index) => (
+          <span key={index} className="badge bg-primary me-1">{tech}</span>
+        ))}
       </div>
+
+      {/* View Details Button */}
+      <Link to={`/projects/${id}`} className="btn btn-outline-info">
+        View Details
+      </Link>
     </div>
   );
 };

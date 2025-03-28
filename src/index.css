@@ -15,7 +15,7 @@ body {
   --hover-green: #38c172; /* Green hover */
 }
 
-/* 🎴 Project Card */
+/* 🎴 Project Card
 .project-card {
   background: var(--light-bg);
   border-radius: 12px;
@@ -30,23 +30,23 @@ body {
 }
 
 /* 🖼 Project Image */
-.project-image {
+/* .project-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-}
+} */
 
 /* 🎯 Project Title */
-.project-title {
+/* .project-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--primary-blue);
   margin-top: 1rem;
-}
+} */
 
 /* 🏆 Section Title */
-.title {
+/* .title {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -55,21 +55,21 @@ body {
   border-bottom: 2px solid var(--primary-blue);
   display: inline-block;
   padding-bottom: 5px;
-}
+} */
 
 /* 📦 Projects Grid */
-.projects-container {
+/* .projects-container {
   background: var(--dark-bg);
   min-height: 100vh;
   padding: 3rem;
   text-align: center;
-}
+} */
 
-.projects-grid {
+/* .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
-}
+} */ */
 
 /* 🔘 Primary Buttons */
 .btn-primary {
