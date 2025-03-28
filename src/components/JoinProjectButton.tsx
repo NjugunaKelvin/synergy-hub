@@ -9,11 +9,15 @@ const JoinProjectButton: React.FC<JoinProjectButtonProps> = ({ projectId }) => {
 
   const handleJoin = () => {
     setJoined(true);
-    alert("You've requested to join this project!");
+    alert(`You've requested to join project: ${projectId}`); // Use projectId here
   };
 
   return (
-    <button className={`btn ${joined ? "btn-success" : "btn-outline-primary"}`} onClick={handleJoin} disabled={joined}>
+    <button
+      className={`btn ${joined ? "btn-success" : "btn-outline-primary"}`}
+      onClick={handleJoin}
+      disabled={joined}
+    >
       {joined ? "Request Sent" : "Join Project"}
     </button>
   );
