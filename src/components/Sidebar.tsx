@@ -24,6 +24,9 @@ const Sidebar = () => {
           <li><Link to="/settings" onClick={() => setIsOpen(false)}><FaCog /> Settings</Link></li>
         </ul>
       </div>
+
+      {/* Overlay for Sidebar (Closes on Click) */}
+      {isOpen && <div className="sidebar-overlay" onClick={() => setIsOpen(false)}></div>}
     </>
   );
 };

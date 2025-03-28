@@ -1,0 +1,116 @@
+/* 🔹 General Styles */
+.project-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 255, 81, 0.3);
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  /* 🔹 Desktop Filter Menu */
+  .filter-menu {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 5px 0;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    color: #ddd;
+    border: 2px solid #444;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: #00ff88;
+    color: #000;
+    border-color: #00ff88;
+    box-shadow: 0px 0px 8px rgba(0, 255, 81, 0.5);
+  }
+  
+  /* 🔹 Mobile Dropdown */
+  .filter-dropdown {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dropdown-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    border: 2px solid #444;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dropdown-toggle:hover {
+    background: #00ff88;
+    color: #000;
+    border-color: #00ff88;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 6px;
+    box-shadow: 0px 3px 8px rgba(0, 255, 81, 0.3);
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    background: transparent;
+    color: #ddd;
+    border: none;
+    padding: 10px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item.active {
+    background: #00ff88;
+    color: #000;
+  }
+  
+  /* 🔹 Responsive Design */
+  @media (max-width: 768px) {
+    .filter-menu {
+      display: none;
+    }
+    .filter-dropdown {
+      display: block;
+    }
+  }
+  
