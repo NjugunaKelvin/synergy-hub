@@ -1,24 +1,28 @@
 import { Link } from "react-router-dom";
-import "../styles/projects.css";
-
+import "../styles/project_card.css";
 
 const ProjectCard = ({ id, title, description, techStack, status }) => {
   return (
-    <div className="card bg-secondary text-light p-3 shadow">
-      <h4 className="text-primary">{title}</h4>
-      <p>{description}</p>
-      <p><strong>Status:</strong> {status}</p>
-      
+    <div className="project-card">
+      {/* Project Header */}
+      <div className="project-header">
+        <h4 className="project-title">{title}</h4>
+        <span className="project-status">{status}</span>
+      </div>
+
+      {/* Description */}
+      <p className="project-description">{description}</p>
+
       {/* Tech Stack */}
-      <div className="mb-3">
+      <div className="project-tech-stack">
         {techStack.map((tech, index) => (
-          <span key={index} className="badge bg-primary me-1">{tech}</span>
+          <span key={index} className="tech-badge">{tech}</span>
         ))}
       </div>
 
       {/* View Details Button */}
-      <Link to={`/projects/${id}`} className="btn btn-outline-info">
-        View Details
+      <Link to={`/projects/${id}`} className="project-details-btn">
+        View Details →
       </Link>
     </div>
   );

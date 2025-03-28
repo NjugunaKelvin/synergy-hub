@@ -118,7 +118,7 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h2 className="title">🚀 Explore Projects</h2>
+      <h2 className="title">Explore Projects</h2>
       <ProjectFilter
         categories={categories}
         activeCategory={activeCategory}

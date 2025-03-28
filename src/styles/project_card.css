@@ -1,0 +1,136 @@
+/* 🌙 Full Black Background */
+body {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* 🔹 Project Card */
+  .project-card {
+    background: rgba(20, 20, 20, 0.8); /* Semi-transparent glass effect */
+    backdrop-filter: blur(12px); /* Smooth blur for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 🔥 Hover Effect - 3D Glow */
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 24px rgba(0, 200, 81, 0.4);
+    border-color: rgba(0, 255, 81, 0.2);
+  }
+  
+  /* 🔹 Header - Title & Status */
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-title {
+    color: #f5f5f5;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* 🔹 Status Badge */
+  .project-status {
+    background: linear-gradient(135deg, #00ff88, #007744);
+    color: #000;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* 🔹 Description */
+  .project-description {
+    font-size: 1rem;
+    color: #c0c0c0;
+    line-height: 1.6;
+  }
+  
+  /* 🔹 Tech Stack */
+  .project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .tech-badge {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ddd;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Tech Badge Hover */
+  .tech-badge:hover {
+    background: rgba(0, 200, 81, 0.2);
+    border-color: #00ff88;
+    color: #00ff88;
+  }
+  
+  /* 🔹 View Details Button */
+  .project-details-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    border: 2px solid #444;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Button Hover - Animated Green */
+  .project-details-btn:hover {
+    background: linear-gradient(135deg, #00ff88, #007744);
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px rgba(0, 255, 81, 0.6);
+    border-color: #00ff88;
+  }
+  
+  /* 🔹 Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      padding: 18px;
+    }
+  
+    .project-title {
+      font-size: 1.3rem;
+    }
+  
+    .tech-badge {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  
+    .project-details-btn {
+      font-size: 0.9rem;
+      padding: 10px 16px;
+    }
+  }
+  

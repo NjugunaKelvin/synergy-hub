@@ -6,7 +6,7 @@ interface ProjectFilterProps {
   
   const ProjectFilter: React.FC<ProjectFilterProps> = ({ categories, activeCategory, setActiveCategory }) => {
     return (
-      <div className="d-flex gap-3 justify-content-center mb-4">
+      <div className="project-filter">
         {categories.map((category) => (
           <button
             key={category}
